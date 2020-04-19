@@ -137,7 +137,8 @@ $(function () {
     })
 })
 
-
-for (var i = 0; i < cards.length; i++) {
-    cards[i].addEventListener('click', displayCards)
-}
+$('.flip-card-front').on('click', function (e) {
+    if (e.target.parentNode.getAttribute('class') === 'flip-card-front') {
+        displayCards(e);
+    }
+})
